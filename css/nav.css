@@ -1,0 +1,104 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: none;
+}
+nav{
+    height: 12vh;
+    background: linear-gradient(60deg, #7600a9, #901ec2, #4660F5, #1C1CD4);/*linear-gradient(45deg, #2dfff5, #fff878);*/
+    position: static;
+}
+@media screen and (max-width: 767px) {
+    nav > h1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        top: 4vh;
+        color: #333;
+        text-shadow: 0 0 8px #fff;
+        font-weight: lighter;
+    }
+    #burger-icon > li{
+        list-style: none;
+        width: 8vw;
+        height: 1.1vh;
+        background: #333;
+        border-radius: 5px;
+        margin-top: 0.4vh;
+        position: relative;
+        /*box-shadow: 0 0 2.5px #fff inset;*/
+    }
+    #burger-icon{
+        width: 9vw;
+        position: relative;
+        left: 10px;
+        cursor: pointer;
+        z-index: 2;
+    }
+    #options{
+        display: none;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        background: linear-gradient(60deg, #7600a9, #901ec2, #4660F5, #1C1CD4);
+        z-index: 1;
+        flex-direction: column;
+        align-items: center;
+    }
+    #options > li{
+        list-style: none;
+        position: relative;
+        top: 40vh;
+        margin: 2.5vh;
+    }
+    #options > li > a{
+        text-decoration: none;
+        color: #f76f00;
+        font-weight: bold;
+        font-size: large;
+        text-shadow: 0 0 6px #222, 0 0 10px #f76f00;
+    }
+    #options > li:hover > a:hover{
+        text-decoration: underline;
+    }
+}
+@media screen and (min-width:768px){
+    #options > li{
+        display: inline-block;
+        position: relative;
+        top: 1vh;
+        left: 62vw;
+        margin-left: 5vw;
+        transition: all 0.5s;
+    }
+    #options > li > a{
+        color: #f76f00;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    #options > li:hover{
+        transform: scale(1.5);
+        transition: all 0.5s;
+    }
+    nav > h1{
+        width: 90vw;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        position: relative;
+        top: 4vh;
+        left: 5vw;
+        color: #333;
+        text-shadow: 0 0 8px #fff;
+        font-weight: bolder;
+    }
+    nav > #burger-icon{
+        display: none;
+    }
+}
+/*
+    #7600a9, #901ec2, #4660F5, #1C1CD4, #f76f00
+*/
